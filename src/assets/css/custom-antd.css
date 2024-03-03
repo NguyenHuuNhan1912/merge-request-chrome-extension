@@ -1,0 +1,16 @@
+.ant-select-selector {
+    /* border: 1px solid #10b981 !important; */
+}
+.ant-checkbox-checked .ant-checkbox-inner {
+    background-color:#10b981; /* Màu bạn muốn sử dụng */
+    border-color:#10b981; /* Màu viền bạn muốn sử dụng */
+  }
+  .ant-modal-footer {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .ant-btn-primary {
+    margin-right: 0; /* Nếu bạn muốn loại bỏ khoảng cách giữa nút OK và Cancel */
+  }
+    

@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Create merge request quickly",
+  "version": "1.0",
+  "description": "This is an extension that creates merge requests quickly",
+  "host_permissions": [
+    "*://*.gitlab.[your-domain].com/"
+  ],
+  "icons": {
+    "48": "logo.png",
+    "128": "logo.png"
+  },
+  "permissions": ["activeTab", "cookies", "storage"],
+  "action": {
+    "width": "800", 
+    "height": "600"   
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';",
+    "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
